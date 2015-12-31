@@ -1,0 +1,502 @@
+fileFormatVersion: 2
+guid: 707d5508ee415b74fabb36591fd88643
+timeCreated: 1451414144
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Gremlin_noBG_0
+    21300002: Gremlin_noBG_1
+    21300004: Gremlin_noBG_2
+    21300006: Gremlin_noBG_3
+    21300008: Gremlin_noBG_4
+    21300010: Gremlin_noBG_5
+    21300012: Gremlin_noBG_6
+    21300014: Gremlin_noBG_7
+    21300016: Gremlin_noBG_8
+    21300018: Gremlin_noBG_9
+    21300020: Gremlin_noBG_10
+    21300022: Gremlin_noBG_11
+    21300024: Gremlin_noBG_12
+    21300026: Gremlin_noBG_13
+    21300028: Gremlin_noBG_14
+    21300030: Gremlin_noBG_15
+    21300032: Gremlin_noBG_16
+    21300034: Gremlin_noBG_17
+    21300036: Gremlin_noBG_18
+    21300038: Gremlin_noBG_19
+    21300040: Gremlin_noBG_20
+    21300042: Gremlin_noBG_21
+    21300044: Gremlin_noBG_22
+    21300046: Gremlin_noBG_23
+    21300048: Gremlin_noBG_24
+    21300050: Gremlin_noBG_25
+    21300052: Gremlin_noBG_26
+    21300054: Gremlin_noBG_27
+    21300056: Gremlin_noBG_28
+    21300058: Gremlin_noBG_29
+    21300060: Gremlin_noBG_30
+    21300062: Gremlin_noBG_31
+    21300064: Gremlin_noBG_32
+    21300066: Gremlin_noBG_33
+    21300068: Gremlin_noBG_34
+    21300070: Gremlin_noBG_35
+    21300072: Gremlin_noBG_36
+    21300074: Gremlin_noBG_37
+    21300076: Gremlin_noBG_38
+    21300078: Gremlin_noBG_39
+    21300080: Gremlin_noBG_40
+    21300082: Gremlin_noBG_41
+    21300084: Gremlin_noBG_42
+    21300086: Gremlin_noBG_43
+    21300088: Gremlin_noBG_44
+    21300090: Gremlin_noBG_45
+    21300092: Gremlin_noBG_46
+    21300094: Gremlin_noBG_47
+    21300096: Gremlin_noBG_48
+    21300098: Gremlin_noBG_49
+    21300100: Gremlin_noBG_50
+    21300102: Gremlin_noBG_51
+    21300104: Gremlin_noBG_52
+    21300106: Gremlin_noBG_53
+    21300108: Gremlin_noBG_54
+    21300110: Gremlin_noBG_55
+    21300112: Gremlin_noBG_56
+    21300114: Gremlin_noBG_57
+    21300116: Gremlin_noBG_58
+    21300118: Gremlin_noBG_59
+    21300120: Gremlin_noBG_60
+    21300122: Gremlin_noBG_61
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Gremlin_noBG_16
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 256
+        width: 84
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 29}
+        - {x: -42, y: 14}
+        - {x: -42, y: -26}
+        - {x: -35, y: -29}
+        - {x: 40, y: -29}
+        - {x: 42, y: -25}
+        - {x: 42, y: 20}
+        - {x: 25, y: 29}
+    - name: Gremlin_noBG_17
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 256
+        width: 82
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38, y: -14}
+        - {x: 41, y: -9}
+        - {x: 41, y: 18}
+        - {x: 36, y: 21}
+        - {x: 30, y: 15}
+        - {x: 15, y: 23}
+        - {x: 4, y: 27}
+        - {x: 0, y: 22}
+        - {x: -3, y: 15}
+        - {x: -1, y: 24}
+        - {x: -2, y: 29}
+        - {x: -15, y: 29}
+        - {x: -41, y: 14}
+        - {x: -41, y: -7}
+        - {x: -36, y: -12}
+        - {x: -34, y: -12}
+        - {x: -31, y: -10}
+        - {x: -30, y: -7}
+        - {x: -30, y: -9}
+        - {x: -37, y: -15}
+        - {x: -33, y: -28}
+        - {x: -33, y: -29}
+        - {x: 31, y: -29}
+        - {x: 33, y: -25}
+        - {x: 33, y: -16}
+        - {x: 31, y: -15}
+    - name: Gremlin_noBG_18
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 260
+        width: 83
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 25.5}
+        - {x: -39.5, y: 10.5}
+        - {x: -41.5, y: -1.5}
+        - {x: -41.5, y: -25.5}
+        - {x: 37.5, y: -25.5}
+        - {x: 41.5, y: -18.5}
+        - {x: 41.5, y: 21.5}
+        - {x: 30.5, y: 25.5}
+    - name: Gremlin_noBG_19
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 258
+        width: 82
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: -22}
+        - {x: 41, y: -16}
+        - {x: 41, y: 11}
+        - {x: 35, y: 11}
+        - {x: 4, y: 27}
+        - {x: 1, y: 27}
+        - {x: -5, y: 21}
+        - {x: -8, y: 27}
+        - {x: -26, y: 27}
+        - {x: -41, y: 7}
+        - {x: -41, y: -27}
+        - {x: 18, y: -27}
+        - {x: 20, y: -19}
+        - {x: 21, y: -13}
+        - {x: 22, y: -17}
+    - name: Gremlin_noBG_47
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 20
+        width: 76
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 29.5}
+        - {x: -38, y: 13.5}
+        - {x: -38, y: -29.5}
+        - {x: 37, y: -29.5}
+        - {x: 38, y: -25.5}
+        - {x: 38, y: 22.5}
+        - {x: 18, y: 29.5}
+    - name: Gremlin_noBG_48
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 19
+        width: 76
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 29}
+        - {x: -38, y: 18}
+        - {x: -38, y: -29}
+        - {x: 38, y: -29}
+        - {x: 38, y: 20}
+        - {x: 32, y: 29}
+    - name: Gremlin_noBG_49
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 18
+        width: 97
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48.5, y: 23}
+        - {x: 46.5, y: 27}
+        - {x: -33.5, y: 27}
+        - {x: -48.5, y: 4}
+        - {x: -48.5, y: -27}
+        - {x: 48.5, y: -27}
+    - name: Gremlin_noBG_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 334
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25, y: 11}
+        - {x: 27, y: 20}
+        - {x: 28, y: 26}
+        - {x: 12, y: 37}
+        - {x: -15, y: 37}
+        - {x: -30, y: 17}
+        - {x: -30, y: -23}
+        - {x: -24, y: -37}
+        - {x: 27, y: -37}
+        - {x: 30, y: -23}
+        - {x: 30, y: -5}
+        - {x: 28, y: 10}
+    - name: Gremlin_noBG_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 333
+        width: 61
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25.5, y: 10.5}
+        - {x: 27.5, y: 19.5}
+        - {x: 28.5, y: 25.5}
+        - {x: 12.5, y: 36.5}
+        - {x: -12.5, y: 36.5}
+        - {x: -30.5, y: 6.5}
+        - {x: -30.5, y: -17.5}
+        - {x: -21.5, y: -36.5}
+        - {x: 22.5, y: -36.5}
+        - {x: 30.5, y: -23.5}
+        - {x: 30.5, y: -5.5}
+        - {x: 28.5, y: 9.5}
+    - name: Gremlin_noBG_2
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 332
+        width: 64
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 37}
+        - {x: -1, y: 37}
+        - {x: -4, y: 35}
+        - {x: -28, y: 18}
+        - {x: -32, y: 7}
+        - {x: -32, y: -37}
+        - {x: 30, y: -37}
+        - {x: 32, y: -32}
+        - {x: 32, y: 11}
+        - {x: 30, y: 26}
+    - name: Gremlin_noBG_3
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 332
+        width: 71
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 37.5}
+        - {x: -29.5, y: 5.5}
+        - {x: -35.5, y: -9.5}
+        - {x: -35.5, y: -31.5}
+        - {x: -18.5, y: -37.5}
+        - {x: 26.5, y: -37.5}
+        - {x: 35.5, y: -30.5}
+        - {x: 35.5, y: 28.5}
+        - {x: 18.5, y: 37.5}
+    - name: Gremlin_noBG_4
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 331
+        width: 65
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.5, y: 38}
+        - {x: -21.5, y: 32}
+        - {x: -32.5, y: 13}
+        - {x: -32.5, y: -30}
+        - {x: -26.5, y: -38}
+        - {x: 32.5, y: -38}
+        - {x: 32.5, y: 34}
+        - {x: 24.5, y: 38}
+    - name: Gremlin_noBG_5
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 332
+        width: 62
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: -24.5}
+        - {x: 21, y: -21.5}
+        - {x: 27, y: -30.5}
+        - {x: 31, y: -28.5}
+        - {x: 31, y: 30.5}
+        - {x: 26, y: 37.5}
+        - {x: -14, y: 37.5}
+        - {x: -26, y: 27.5}
+        - {x: -31, y: 16.5}
+        - {x: -31, y: -33.5}
+        - {x: -23, y: -37.5}
+        - {x: 23, y: -37.5}
+        - {x: 21, y: -30.5}
+        - {x: 18, y: -27.5}
+        - {x: 16, y: -27.5}
+    - name: Gremlin_noBG_29
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 178
+        width: 80
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1, y: 22.5}
+        - {x: -6, y: 18.5}
+        - {x: -7, y: 30.5}
+        - {x: -14, y: 30.5}
+        - {x: -16, y: 28.5}
+        - {x: -28, y: 18.5}
+        - {x: -40, y: 0.5}
+        - {x: -40, y: -24.5}
+        - {x: -38, y: -29.5}
+        - {x: -37, y: -30.5}
+        - {x: 40, y: -30.5}
+        - {x: 40, y: 17.5}
+        - {x: 9, y: 27.5}
+    - name: Gremlin_noBG_30
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 179
+        width: 76
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 29.5}
+        - {x: -38, y: 13.5}
+        - {x: -38, y: -29.5}
+        - {x: 37, y: -29.5}
+        - {x: 38, y: -25.5}
+        - {x: 38, y: 22.5}
+        - {x: 18, y: 29.5}
+    - name: Gremlin_noBG_31
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 179
+        width: 76
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 29}
+        - {x: -38, y: 18}
+        - {x: -38, y: -29}
+        - {x: 38, y: -29}
+        - {x: 38, y: 20}
+        - {x: 32, y: 29}
+    - name: Gremlin_noBG_32
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 180
+        width: 91
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21.5, y: 28.5}
+        - {x: -22.5, y: 28.5}
+        - {x: -45.5, y: 0.5}
+        - {x: -45.5, y: -28.5}
+        - {x: 22.5, y: -28.5}
+        - {x: 45.5, y: -24.5}
+        - {x: 45.5, y: 23.5}
+    - name: Gremlin_noBG_33
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 179
+        width: 87
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37.5, y: 15}
+        - {x: 31.5, y: 13}
+        - {x: 3.5, y: 28}
+        - {x: -24.5, y: 28}
+        - {x: -43.5, y: 1}
+        - {x: -43.5, y: -28}
+        - {x: 28.5, y: -28}
+        - {x: 43.5, y: -23}
+        - {x: 43.5, y: 8}
+        - {x: 39.5, y: 13}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
