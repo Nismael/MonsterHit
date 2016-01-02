@@ -11,9 +11,9 @@ public class Gremlin : MonoBehaviour
     public float Speed { get; set; }
     public int Damage { get; set; }
 
-    private Animator _animator;
-    private eGremlinState mState;
-    private int animTime = 90;
+    private Animator _Animator;
+    private eGremlinState State;
+    private int AnimTime = 90;
 
     enum eGremlinState
     {
@@ -25,20 +25,20 @@ public class Gremlin : MonoBehaviour
 
     public void Awake()
     {
-        _animator = GetComponent<Animator>();
-        mState = eGremlinState.Idle;
+        _Animator = GetComponent<Animator>();
+        State = eGremlinState.Idle;
     }
 
     public void Walk()
     {
-        mState = eGremlinState.Walking;
-        _animator.SetTrigger("startWalking");
+        State = eGremlinState.Walking;
+        _Animator.SetTrigger("startWalking");
     }
 
     public void Attack()
     {
-        mState = eGremlinState.Attacking;
-        _animator.SetTrigger("startAttacking");
+        State = eGremlinState.Attacking;
+        _Animator.SetTrigger("startAttacking");
         OnMonsterAttack(this);
     }
 
@@ -49,7 +49,7 @@ public class Gremlin : MonoBehaviour
 
     void Update()
     {
-        switch (mState)
+        switch (State)
         {
             case eGremlinState.Walking:
             {
@@ -60,8 +60,8 @@ public class Gremlin : MonoBehaviour
             case eGremlinState.Dying:
             {
                 //I wish there was a better mechanism to hook callbacks to an animation timeline. Just hacking for now
-                animTime--;
-                if (!_animator.IsInTransition(0) && animTime <= 0)
+                AnimTime--;
+                if (!_Animator.IsInTransition(0) && AnimTime <= 0)
                 {
                     OnActionsCompleted(this);
                 }
@@ -72,14 +72,14 @@ public class Gremlin : MonoBehaviour
 
     void OnMouseDown()
     {
-        mState = eGremlinState.Dying;
-        _animator.SetTrigger("startDying");
+        State = eGremlinState.Dying;
+        _Animator.SetTrigger("startDying");
         OnMonsterKilled(this);
     }
 
     void OnGUI()
     {
-        if (mState == eGremlinState.Dying)
+        if (State == eGremlinState.Dying)
         {
             Vector2 screenPoint = Camera.main.WorldToScreenPoint(transform.position); 
             GUI.Label(new Rect(screenPoint.x-5, Screen.height - screenPoint.y - 35, 100, 50), "50");

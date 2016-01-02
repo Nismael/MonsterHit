@@ -4,32 +4,33 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     public GameObject Monster;
-    public UnityEngine.UI.Text scoreText;
     public GameObject GameOverHandler;
     private HUDManager HUDManager;
 
-    private List<Gremlin> monsters = new List<Gremlin>();
     private const float SpawnRate = 1.0f;
-    private float spawnTimer = 0;
-    public int playerHealth = 100;
-    private int playerScore = 0;
-    private bool bRunning = false;
+    private const int MaxHealth = 100;
 
-    void Start ()
+    private List<Gremlin> Monsters = new List<Gremlin>();
+    private float SpawnTimer = 0;
+    private int PlayerHealth = 0;
+    private int PlayerScore = 0;
+    private bool Running = false;
+
+    void Start()
     {
-        bRunning = true;
         HUDManager = GameObject.Find("HUD").GetComponent<HUDManager>();
+        PrepareGame();
     }
 	
 	void Update ()
     {
-        if (!bRunning)
+        if (!Running)
             return;
 
-        spawnTimer += Time.deltaTime;
-        if (spawnTimer >= SpawnRate)
+        SpawnTimer += Time.deltaTime;
+        if (SpawnTimer >= SpawnRate)
         {
-            spawnTimer = 0;
+            SpawnTimer = 0;
 
             Vector3 position = Camera.main.ViewportToWorldPoint(new Vector3(0, 1));
             position.x = Mathf.Lerp(-position.x, position.x, Random.value);
@@ -44,35 +45,46 @@ public class GameManager : MonoBehaviour
             Gremlin.OnMonsterKilled += OnMonsterKilled;
             Gremlin.OnMonsterAttack += OnMonsterAttack;
             Gremlin.Walk();
-            monsters.Add(Gremlin);
+            Monsters.Add(Gremlin);
         }
+    }
+
+    private void PrepareGame()
+    {
+        PlayerScore = 0;
+        PlayerHealth = 100;
+        SpawnTimer = 0;
+        HUDManager.UpdateScore(0);
+        HUDManager._HealthBar.UpdateHealth(1);
+        Running = true;
     }
 
     public void OnActionsCompleted(Gremlin monster)
     {
-        if (monsters.Find(x => x == monster))
+        if (Monsters.Find(x => x == monster))
         {
             Destroy(monster.gameObject);
-            monsters.Remove(monster);
+            Monsters.Remove(monster);
         }
     }
 
     public void OnMonsterKilled(Gremlin monster)
     {
-        playerScore += 50;
-        HUDManager.UpdateScore(playerScore);
+        PlayerScore += 50;
+        HUDManager.UpdateScore(PlayerScore);
     }
 
     public void OnMonsterAttack(Gremlin monster)
     {
-        if (!bRunning)
+        if (!Running)
             return;
 
-        playerHealth -= 100;// monster.Damage;
+        PlayerHealth -= monster.Damage;
+        HUDManager._HealthBar.UpdateHealth(PlayerHealth/100f);
 
-        if (playerHealth <= 0)
+        if (PlayerHealth <= 0)
         {
-            bRunning = false;
+            Running = false;
             HUDManager.ShowGameOverScreen();
         }
     }
@@ -82,19 +94,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("RestartGame");
 
         HUDManager.ResetGameOverScreen();
-        HUDManager.UpdateScore(0);
+        PrepareGame();
 
-        playerScore = 0;
-        playerHealth = 100;
-        scoreText.text = "0";
-        spawnTimer = 0;
-        bRunning = true;
-
-        foreach (Gremlin g in monsters)
+        foreach (Gremlin g in Monsters)
         {
             Destroy(g.gameObject);
         }
 
-        monsters.Clear();
+        Monsters.Clear();
     }
 }

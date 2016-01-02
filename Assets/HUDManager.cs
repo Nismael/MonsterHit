@@ -5,12 +5,13 @@ public class HUDManager : MonoBehaviour
 {
     public UnityEngine.UI.Text GameHUDScoreText;
     public UnityEngine.UI.Text GameOverScoreText;
+    public HealthBar _HealthBar;
 
-    private Animator animator;
+    private Animator GameOverAnimator;
 
     void Start ()
     {
-        animator = GetComponent<Animator>();
+        GameOverAnimator = GetComponent<Animator>();
 	}
 	
     public void UpdateScore(int score)
@@ -21,12 +22,11 @@ public class HUDManager : MonoBehaviour
 
     public void ShowGameOverScreen()
     {
-        Debug.Log("ShowGameOverScreen");
-        animator.SetTrigger("GameOver");
+        GameOverAnimator.SetTrigger("GameOver");
     }
 
     public void ResetGameOverScreen()
     {
-        animator.Play("Idle");
+        GameOverAnimator.Play("Idle");
     }
 }
