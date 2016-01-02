@@ -3,11 +3,13 @@ using System.Collections;
 
 public class Gremlin : MonoBehaviour
 {
-    public delegate void AttackCompleted(GameObject obj);
-    public event AttackCompleted OnAttackCompleted;
+    public delegate void GremlinAction(Gremlin obj);
+    public event GremlinAction OnActionsCompleted;
+    public event GremlinAction OnMonsterKilled;
+    public event GremlinAction OnMonsterAttack;
 
     public float Speed { get; set; }
-    public float Damage { get; set; }
+    public int Damage { get; set; }
 
     private Animator _animator;
     private eGremlinState mState;
@@ -24,7 +26,6 @@ public class Gremlin : MonoBehaviour
     public void Awake()
     {
         _animator = GetComponent<Animator>();
-
         mState = eGremlinState.Idle;
     }
 
@@ -38,6 +39,7 @@ public class Gremlin : MonoBehaviour
     {
         mState = eGremlinState.Attacking;
         _animator.SetTrigger("startAttacking");
+        OnMonsterAttack(this);
     }
 
     public void Kill()
@@ -56,12 +58,12 @@ public class Gremlin : MonoBehaviour
             }
             case eGremlinState.Attacking:
             case eGremlinState.Dying:
-                {
+            {
                 //I wish there was a better mechanism to hook callbacks to an animation timeline. Just hacking for now
                 animTime--;
                 if (!_animator.IsInTransition(0) && animTime <= 0)
                 {
-                    OnAttackCompleted(this.gameObject);
+                    OnActionsCompleted(this);
                 }
                 break;
             }
@@ -72,6 +74,16 @@ public class Gremlin : MonoBehaviour
     {
         mState = eGremlinState.Dying;
         _animator.SetTrigger("startDying");
+        OnMonsterKilled(this);
+    }
+
+    void OnGUI()
+    {
+        if (mState == eGremlinState.Dying)
+        {
+            Vector2 screenPoint = Camera.main.WorldToScreenPoint(transform.position); 
+            GUI.Label(new Rect(screenPoint.x-5, Screen.height - screenPoint.y - 35, 100, 50), "50");
+        }                
     }
 }
 
