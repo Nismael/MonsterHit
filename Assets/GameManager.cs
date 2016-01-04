@@ -7,11 +7,11 @@ public class GameManager : MonoBehaviour
     public GameObject GameOverHandler;
     private HUDManager HUDManager;
 
-    private const float SpawnRate = 1.0f;
     private const int MaxHealth = 100;
 
     private List<Gremlin> Monsters = new List<Gremlin>();
-    private float SpawnTimer = 0;
+    private float NextSpawn = 0.0f;
+    private float TotalTime = 0;
     private int PlayerHealth = 0;
     private int PlayerScore = 0;
     private bool Running = false;
@@ -27,10 +27,11 @@ public class GameManager : MonoBehaviour
         if (!Running)
             return;
 
-        SpawnTimer += Time.deltaTime;
-        if (SpawnTimer >= SpawnRate)
+        TotalTime += Time.deltaTime;
+        if (TotalTime >= NextSpawn)
         {
-            SpawnTimer = 0;
+            float factor = (TotalTime * 0.025f);
+            NextSpawn = TotalTime + Mathf.Lerp(1 - factor, 2 - factor, Random.value);
 
             Vector3 position = Camera.main.ViewportToWorldPoint(new Vector3(0, 1));
             position.x = Mathf.Lerp(-position.x, position.x, Random.value);
@@ -53,7 +54,8 @@ public class GameManager : MonoBehaviour
     {
         PlayerScore = 0;
         PlayerHealth = 100;
-        SpawnTimer = 0;
+        TotalTime = 0;
+        NextSpawn = Mathf.Lerp(1, 2, Random.value);
         HUDManager.UpdateScore(0);
         HUDManager._HealthBar.UpdateHealth(1);
         Running = true;
@@ -86,6 +88,14 @@ public class GameManager : MonoBehaviour
         {
             Running = false;
             HUDManager.ShowGameOverScreen();
+
+            foreach (Gremlin g in Monsters)
+            {
+                if (g != monster)
+                {
+                    g.Stop();
+                }
+            }
         }
     }
 

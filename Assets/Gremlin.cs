@@ -15,6 +15,15 @@ public class Gremlin : MonoBehaviour
     private eGremlinState State;
     private int AnimTime = 90;
 
+    private AudioClip sfxWalk;
+    private AudioClip sfxAttack;
+    private AudioClip sfxDie;
+
+    private AudioSource _AudioSource;
+    public AudioClip SpawnClip;
+    public AudioClip KillClip;
+    public AudioClip AttackClip;
+
     enum eGremlinState
     {
         Idle,
@@ -23,10 +32,26 @@ public class Gremlin : MonoBehaviour
         Dying
     }
 
+    /*AudioSource AddAudio(AudioClip clip, bool loop, bool playAwake, float vol)
+    {
+        AudioSource newAudio = gameObject.AddComponent<AudioSource>();
+        newAudio.clip = clip; 
+        newAudio.loop = loop; 
+        newAudio.playOnAwake = playAwake; 
+        newAudio.volume = vol;
+        return newAudio;
+    }*/
+
     public void Awake()
     {
         _Animator = GetComponent<Animator>();
+        _AudioSource = GetComponent<AudioSource>();
         State = eGremlinState.Idle;
+    }
+
+    public void Start()
+    {
+        _AudioSource.PlayOneShot(SpawnClip, 1.0f);
     }
 
     public void Walk()
@@ -40,11 +65,24 @@ public class Gremlin : MonoBehaviour
         State = eGremlinState.Attacking;
         _Animator.SetTrigger("startAttacking");
         OnMonsterAttack(this);
+        _AudioSource.PlayOneShot(AttackClip);
     }
 
     public void Kill()
     {
-        //mState = eGremlinState.;
+        State = eGremlinState.Dying;
+        _Animator.SetTrigger("startDying");
+        OnMonsterKilled(this);
+        _AudioSource.PlayOneShot(KillClip, 1.0f);
+    }
+
+    public void Stop()
+    {
+        if (State != eGremlinState.Dying)
+        {
+            State = eGremlinState.Idle;
+            _Animator.Play("Idle");
+        }
     }
 
     void Update()
@@ -72,9 +110,7 @@ public class Gremlin : MonoBehaviour
 
     void OnMouseDown()
     {
-        State = eGremlinState.Dying;
-        _Animator.SetTrigger("startDying");
-        OnMonsterKilled(this);
+        Kill();
     }
 
     void OnGUI()
